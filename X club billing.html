@@ -1,0 +1,120 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>
+      X club billing
+    </title>
+    <style>
+      * {
+        font-family: 'helvetica';
+        font-size: 10px;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        min-height: 100vh;     
+      }
+      h1 {
+        font-weight: 800;
+        font-size: 6rem;
+        color: ffffff;
+        text-align:center;
+        margin: 0;
+        text-transform: uppercase;
+      }/*#22401E,#402313*/
+      h2 {
+        font-weight: 500;
+        font-size: 3rem;
+        font-style: Italic;
+        color: ffffff;
+        text-align:center;
+      }
+      .image-container {
+        position: relative;
+        width: 100%;
+        max-height: auto;
+        overflow: hidden;
+    }
+      img {
+        width: 100%;
+        height: 80vh;
+        object-fit:cover;
+    }
+    .overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 5%;
+    text-align: center;
+    width: 60%;
+    height: auto;
+  }
+  .overlay-text {
+    margin: 0;
+  }  
+      button {
+        background-color: #83B43D;
+        color:antiquewhite;
+        margin-top: 2%;
+        padding: 1%;
+        width: 160px;
+        height: auto;
+        border: none;
+        border-radius: 10px;
+      }
+      .checkbtn {
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      nav {
+        background-color: #22401E;
+        color: #83B43D;
+        width: 8%;
+        height: auto;
+        padding: 0.9%;
+        margin: 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    </style>
+    <title>Whose Paying</title>
+  </head>
+  <body>
+      <nav>
+        X Club Billing
+      </nav>
+    <section>
+  <div class="image-container">
+    <img src="young-people-drinking-alcohol-restaurant.jpg" alt="friend having an outing">
+  </div>
+  <div class ="overlay-container">
+    <h1>Billing Made Easier</h1>
+    <h2>Discover who is paying your next bill</h2>
+  </div>
+    <button type="button" onclick="whoseBuying()" class="checkbtn">Check</button>
+  </section>
+  <script>
+    function whoseBuying() {
+      var friendsNames = prompt("Enter your friends' names seperated by commas");
+      var names = friendsNames.split(',').map(names => names.trim());
+      var numberOfPeople = names.length;
+      var randomPersonPosition = Math.floor(Math.random() * numberOfPeople);
+      var randomPerson = names[randomPersonPosition];
+      alert(randomPerson + " is going to pay your bills today") ;
+    }
+    
+</script>
+
+  </script>
+  </body>
+</html>
